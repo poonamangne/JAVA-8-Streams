@@ -1,11 +1,11 @@
-package com.example.java8streams;
+package com.example.java8streams.ListServices;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-public class ListOperation {
+public class ListOperations {
 
 	public static int[] createNumberArray() {
 		int[] numbers = { 1, 2, 3, 4 };
@@ -45,14 +45,14 @@ public class ListOperation {
 		}
 	}
 
-	public static void addListElementsToKey(int[] numbers, int key) {
+	public static void addArrayElementsToKey(int[] numbers, int key) {
 		System.out.println("\n/***Printing All Elements added to key***/");
 		process(numbers, key, (v, k) -> System.out.println(v + k));
 	}
 	
-	public static void multiplyElements(int number1, int number2) {
+	public static void multiplyArrayElementsToKey(int[] numbers, int key) {
 		System.out.println("\n/***Printing All Elements multiplied***/");
-		execute(number1, number2, (a, b) -> System.out.println(a * b));
+		process(numbers, key, (a, b) -> System.out.println(a * b));
 	}
 	
 	public static void createThread() {
